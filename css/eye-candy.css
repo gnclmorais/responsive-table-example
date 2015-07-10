@@ -2,12 +2,14 @@
  * Visual improvements, some more important than other.
  */
 
-/** General list styling */
-
-.smart-table li {
+.smart-table ul {
+  margin-bottom: 4em;
 }
 
-/** Now start the proper eye candy... */
+.smart-table li {
+  margin: 0;
+  padding: .5em;
+}
 
 li:nth-child(2n-1) {
   background: lightgrey;

@@ -14,6 +14,11 @@
 
 .smart-table li {
   list-style-type: none;
+  display: flex;
+}
+
+.smart-table li > * {
+  flex-grow: 1;
 }
 
 .smart-table--row-meaning,

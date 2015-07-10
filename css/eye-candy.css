@@ -1,0 +1,18 @@
+/**
+ * Visual improvements, some more important than other.
+ */
+
+/** General list styling */
+
+.smart-table li {
+}
+
+/** Now start the proper eye candy... */
+
+li:nth-child(2n-1) {
+  background: lightgrey;
+}
+
+.smart-table--row-header {
+  font-weight: 400;
+}

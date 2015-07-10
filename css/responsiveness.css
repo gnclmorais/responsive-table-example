@@ -1,0 +1,43 @@
+/**
+ * "Behavioural" code, making out "table" responsive.
+ */
+
+.smart-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.smart-table ul {
+  float: left;
+  flex-grow: 1;
+}
+
+.smart-table li {
+  list-style-type: none;
+}
+
+.smart-table--row-meaning,
+.smart-table--row-value {
+  display: inline;
+}
+
+/**  */
+
+/** Collapsable columns, when the space is too narrow */
+.smart-table--column-collapsable {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .smart-table {
+    flex-direction: row;
+  }
+
+  .smart-table--column-collapsable {
+    display: block;
+  }
+
+  .smart-table--row-meaning {
+    display: none;
+  }
+}

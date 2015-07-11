@@ -2,11 +2,11 @@
  * Visual improvements, some more important than other.
  */
 
-.smart-table ul {
+.smart-table .smart-table--column {
   margin-bottom: 4em;
 }
 
-.smart-table li {
+.smart-table .smart-table--row {
   margin: 0;
   padding: .5em;
 }

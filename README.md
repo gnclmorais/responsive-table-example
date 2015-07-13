@@ -46,6 +46,8 @@ The technique in play here has a few simple steps:
 ```
 
 ## Credits
+- The [responsive table technique](http://codyhouse.co/demo/pricing-tables/)
+  that I used as a base to my interpretation.
 - This demo was easily built thanks to some flexbox goodness.
   [This](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) is still
   my favourite place to go to, when in doubt.

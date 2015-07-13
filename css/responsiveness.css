@@ -45,7 +45,7 @@
 }
 
 /** When there's enough space... */
-@media (min-width: 1000px) {
+@media (min-width: 550px) {
   /** Place rows side by side. */
   .smart-table {
     flex-direction: row;

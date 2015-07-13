@@ -15,6 +15,22 @@ li:nth-child(2n) {
   background: lightgrey;
 }
 
-.smart-table--row-header {
-  font-weight: 400;
+.smart-table--column__collapsable,
+.smart-table--row-header,
+.smart-table--row-meaning {
+  font-weight: 500;
+}
+
+.smart-table--row-value {
+  text-align: right;
+}
+
+@media (min-width: 550px) {
+  .smart-table--row-header {
+    justify-content: center;
+  }
+
+  .smart-table--row-value {
+    text-align: center;
+  }
 }

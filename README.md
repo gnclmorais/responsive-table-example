@@ -44,3 +44,8 @@ The technique in play here has a few simple steps:
   .smart-table--column
     …
 ```
+
+## Credits
+- This demo was easily built thanks to some flexbox goodness.
+  [This](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) is still
+  my favourite place to go to, when in doubt.

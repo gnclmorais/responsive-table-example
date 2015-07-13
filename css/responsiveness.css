@@ -2,42 +2,43 @@
  * "Behavioural" code, making out "table" responsive.
  */
 
+/** <table> equivalent */
 .smart-table {
   display: flex;
   flex-direction: column;
 }
 
-  .smart-table .smart-table--column {
-    float: left;
-    flex-grow: 1;
-  }
+.smart-table .smart-table--column {
+  float: left;
+  flex-grow: 1;
+}
 
-  .smart-table .smart-table--row {
-    list-style-type: none;
-    display: flex;
-  }
+.smart-table .smart-table--row {
+  list-style-type: none;
+  display: flex;
+}
 
-    .smart-table .smart-table--row > * {
-      flex-grow: 1;
-    }
+.smart-table .smart-table--row > * {
+  flex-grow: 1;
+}
 
-      .smart-table--row-header__hidden {
-        visibility: hidden;
-      }
+.smart-table--row-header__hidden {
+  visibility: hidden;
+}
 
-      .smart-table--row-meaning {
-        font-weight: 400;
-      }
+.smart-table--row-meaning {
+  font-weight: 400;
+}
 
-      .smart-table--row-meaning,
-      .smart-table--row-value {
-        display: inline;
-      }
+.smart-table--row-meaning,
+.smart-table--row-value {
+  display: inline;
+}
 
 /**  */
 
 /** Collapsable columns, when the space is too narrow */
-.smart-table--column-collapsable {
+.smart-table--column__collapsable {
   display: none;
 }
 
@@ -46,7 +47,7 @@
     flex-direction: row;
   }
 
-  .smart-table--column-collapsable {
+  .smart-table--column__collapsable {
     display: block;
   }
 

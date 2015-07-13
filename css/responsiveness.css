@@ -8,29 +8,24 @@
   flex-direction: column;
 }
 
-.smart-table .smart-table--column {
-  float: left;
+/** Expand columns and cells. */
+.smart-table--column,
+.smart-table--row > * {
   flex-grow: 1;
 }
 
-.smart-table .smart-table--row {
-  list-style-type: none;
+/** Collapsable columns, when the space is too narrow */
+.smart-table--column__collapsable {
+  display: none;
+}
+
+.smart-table--row {
   display: flex;
-}
-
-/** Make every direct children of row expand. */
-.smart-table .smart-table--row > * {
-  flex-grow: 1;
 }
 
 /** Hides unnecessary headers. */
 .smart-table--row-header__hidden {
   visibility: hidden;
-}
-
-/** Name/meaning of the row. */
-.smart-table--row-meaning {
-  font-weight: 400;
 }
 
 /** Make name/meaning and value play well together on the same cell. */
@@ -39,25 +34,22 @@
   display: inline;
 }
 
-/** Collapsable columns, when the space is too narrow */
-.smart-table--column__collapsable {
-  display: none;
-}
-
 /** When there's enough space... */
+/** Note: the width value heavily depends on the table content. */
 @media (min-width: 550px) {
   /** Place rows side by side. */
   .smart-table {
     flex-direction: row;
   }
 
-  /** Show column with the rows' name/meaning. */
-  .smart-table--column__collapsable {
-    display: block;
-  }
-
   /** Hide individual names/meanins, since we have a column with that. */
   .smart-table--row-meaning {
     display: none;
+  }
+
+  /** Show column with the rows' name/meaning. */
+  .smart-table--column__collapsable,
+  .smart-table--column__collapsable .smart-table--row-meaning {
+    display: block;
   }
 }

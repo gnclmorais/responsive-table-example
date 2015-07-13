@@ -2,8 +2,23 @@
  * Visual improvements, some more important than other.
  */
 
-.smart-table .smart-table--column {
-  margin-bottom: 4em;
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container {
+  margin-top: 4em;
+}
+
+h1 {
+  text-align: center;
 }
 
 .smart-table .smart-table--row {
@@ -11,8 +26,16 @@
   padding: .5em;
 }
 
+ul {
+  list-style-type: none;
+}
+
 li:nth-child(2n) {
-  background: lightgrey;
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.smart-table--column {
+  margin-bottom: 4em;
 }
 
 .smart-table--column__collapsable,
@@ -21,16 +44,48 @@ li:nth-child(2n) {
   font-weight: 500;
 }
 
+.smart-table--column:nth-child(2) .smart-table--row-header {
+  color: #197682;
+}
+.smart-table--column:nth-child(3) .smart-table--row-header {
+  color: #DF175E;
+}
+.smart-table--column:nth-child(4) .smart-table--row-header {
+  color: #2E0452;
+}
+
+.smart-table--column__collapsable {
+  flex-grow: 0;
+}
+
 .smart-table--row-value {
   text-align: right;
 }
 
 @media (min-width: 550px) {
+  .container {
+    margin-top: 0;
+  }
+
+  .smart-table--column {
+    margin-bottom: 0;
+  }
+
   .smart-table--row-header {
     justify-content: center;
   }
 
   .smart-table--row-value {
     text-align: center;
+  }
+
+  .smart-table--column:nth-child(2) {
+    color: #197682;
+  }
+  .smart-table--column:nth-child(3) {
+    color: #DF175E;
+  }
+  .smart-table--column:nth-child(4) {
+    color: #2E0452;
   }
 }

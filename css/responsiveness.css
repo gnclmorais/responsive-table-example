@@ -1,8 +1,8 @@
 /**
- * "Behavioural" code, making out "table" responsive.
+ * "Behavioural" code, making our "table" responsive.
  */
 
-/** <table> equivalent */
+/** <table> equivalent. By default (mobile first), stack the columns. */
 .smart-table {
   display: flex;
   flex-direction: column;
@@ -18,39 +18,45 @@
   display: flex;
 }
 
+/** Make every direct children of row expand. */
 .smart-table .smart-table--row > * {
   flex-grow: 1;
 }
 
+/** Hides unnecessary headers. */
 .smart-table--row-header__hidden {
   visibility: hidden;
 }
 
+/** Name/meaning of the row. */
 .smart-table--row-meaning {
   font-weight: 400;
 }
 
+/** Make name/meaning and value play well together on the same cell. */
 .smart-table--row-meaning,
 .smart-table--row-value {
   display: inline;
 }
-
-/**  */
 
 /** Collapsable columns, when the space is too narrow */
 .smart-table--column__collapsable {
   display: none;
 }
 
+/** When there's enough space... */
 @media (min-width: 1000px) {
+  /** Place rows side by side. */
   .smart-table {
     flex-direction: row;
   }
 
+  /** Show column with the rows' name/meaning. */
   .smart-table--column__collapsable {
     display: block;
   }
 
+  /** Hide individual names/meanins, since we have a column with that. */
   .smart-table--row-meaning {
     display: none;
   }
